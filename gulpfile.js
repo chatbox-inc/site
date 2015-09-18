@@ -11,6 +11,8 @@ gulp.task("imagemin",require("./gulp/image-min.js"))
 
 gulp.task("bower",require("./gulp/bower.js"))
 
+gulp.task("sitemap",require("./gulp/sitemap.js"))
+
 gulp.task("watch",function(){
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./script/**/*.js', ['babel']);
