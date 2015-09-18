@@ -1,0 +1,95 @@
+extends layout
+
+block content
+    div.heroSection
+        img(src="/assets/img/thumbnail/logo.png",style={"width":"100%"})
+
+    .container.text-center
+        h1 Web開発でここだけのお話
+        #container.col
+            p 進歩する情報技術の中でも、人と人とのコミュニケーションは変わりません。
+            P Webにまつわる日頃の悩みや疑問、「Web制作」にまつわる思いに真摯に対応します。
+            P 「作る」だけでなく、「伝え合う」事に取り組みたい。
+            P 株式会社chatboxはWebの「これから」を語り合う会社です。
+
+    // ３列トピック
+    div.topicSection
+        div.row: div.container
+            - var content = page.metadata.toppage.topic
+            for item,index in content
+                div.col-md-4: .topicItem
+                    i.glyphicon.glyphicon-adjust
+                    h3=item.title
+                    for sentence in item.brief
+                        p=sentence
+    // Web制作
+    - var content = page.metadata.toppage.create
+    div.labSection: .container
+        h2=content.title
+        div.row: .col-md-10.col-md-offset-1
+            for sentence in content.brief
+                p=sentence
+        div.row
+            - var item = content.items[0]
+            div.col-md-6.labItem
+                img(src="/assets/img/thumbnail/console.jpg")
+                h3=item.title
+                for sententce in item.brief
+                    p=sententce
+            - var item = content.items[1]
+            div.col-md-6.labItem
+                img(src="/assets/img/thumbnail/pointinfo.jpg")
+                h3=item.title
+                for sententce in item.brief
+                    p=sententce
+    // SCHOOL
+    - var content = page.metadata.toppage.school
+    div.shoolSection: .container
+        h2=content.title
+        div.row: .col-md-10.col-md-offset-1
+            for sentence in content.brief
+                p!=sentence
+        div.row
+            - var item = content.items[0]
+            div.col-md-12
+                h3=item.title
+            div.col-md-6.photoPane
+                img.fit(src="/assets/img/thumbnail/C7_Coworking.jpg")
+            div.col-md-6
+                for sentence in item.brief
+                    p!=sentence
+        br
+        div.row
+            - var item = content.items[1]
+            div.col-md-12
+                h3=item.title
+            div.col-md-6.col-md-push-6.photoPane
+                img.fit(src="/assets/img/thumbnail/writenote.jpg")
+            div.col-md-6.col-md-pull-6
+                for sentence in item.brief
+                    p!=sentence
+    // EVENT
+    - var content = page.metadata.toppage.event
+    div.eventSection: .container
+        h2=content.title
+        div.row: .col-md-10.col-md-offset-1
+            for sentence in content.brief
+                p=sentence
+        div.row
+            - var item = content.items[0]
+            div.col-md-6.labItem
+                img(src="/assets/img/thumbnail//event.jpg")
+                h3=item.title
+                for sententce in item.brief
+                    p=sententce
+            - var item = content.items[1]
+            div.col-md-6.labItem
+                img(src="/assets/img/thumbnail/aim.png")
+                h3=item.title
+                for sententce in item.brief
+                    p=sententce
+    div#contactSection
+        a(href="http://chatbox-contact.webflow.io/" target="blank")
+            p 案件に関するご相談はお気軽にお問い合わせページまで
+
+

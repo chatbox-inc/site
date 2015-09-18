@@ -1,0 +1,37 @@
+extends ../layout
+block content
+    div#headingSection: .container
+      h1 chatbox member
+      p chatboxで働くメンバーの紹介
+
+    div#staffSection: .container
+        //h2 Core Staff
+        //br
+        div.row.staffItem
+          div.col-md-4
+            img.face(src="/assets/img/origin/mikakane.jpg")
+          div.col-md-8
+              h3.namePlate
+                span.title 代表取締役
+                span.name  後藤&nbsp;知宏
+              p.skill
+                span php
+                span frontend
+                span full-stack
+              div.profile
+               p 株式会社chatbox代表。関西フロントエンドUG代表。
+               p PHPやフロントエンド周りのWeb系技術を中心に活動。2015.01に関西フロントエンドUGを発足してからはイベントオーガナイザーとしても活動中。
+
+        br
+    div#reqSection: .container
+        //h2 Core Staff
+        //br
+        h2 Join US
+        p chatboxでは一緒に働くスタッフ、フリーランスメンバーを募集しています。
+        p 学生、未経験者でも歓迎。Web制作にまつわる基礎技術から、スタッフが丁寧にサポートします。
+        p
+        br
+    div#contactSection
+        a(href="http://chatbox-contact.webflow.io/" target="blank")
+            p メンバー参加に関するご相談はお気軽にお問い合わせページまで
+

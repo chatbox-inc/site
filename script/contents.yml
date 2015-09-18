@@ -1,0 +1,16 @@
+create:
+  title: Web制作
+  brief: デザインからシステム構築、サーバ設定までまとめて社内で制作可能なchatboxだからこそできる提案力で、お客様のビジネス上の課題を解決します。
+  items:
+    -
+      title: 受託開発
+      brief:
+        - Webページ制作からWebシステム開発まで、Webに関するお困り事は何でもchatboxまでご相談ください。
+        - 技術力に自信のあるスタッフがお客様の課題に真摯に対応します。
+      image: /assets/img/pakutaso/PAK85_notepc20150319202127.jpg
+    - 
+      title: 受託開発
+      brief:
+        - Webページ制作からWebシステム開発まで、Webに関するお困り事は何でもchatboxまでご相談ください。
+        - 技術力に自信のあるスタッフがお客様の課題に真摯に対応します。
+      image: /assets/img/pakutaso/PAK85_notepc20150319202127.jpg

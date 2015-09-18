@@ -1,0 +1,41 @@
+extends ../layout
+block content
+    - var pageContent = page.metadata.works
+    div#headingSection: .container
+      h1=pageContent.title
+      for sentence in pageContent.brief
+          p=sentence
+
+    - var content = page.metadata.works.samples
+    div#jireiSection: .container
+        h2=content.title
+        div.row: div.col-md-10.col-md-offset-1=content.brief
+        br
+        div.row
+            for item in content.items
+                div.col-md-4: .jireiItem
+                    i.glyphicon.glyphicon-adjust
+                    h3=item.title
+                    for sentence in item.brief
+                        p=sentence
+    - var content = page.metadata.works.reason
+    div#reasonSection: .container
+        h2=content.title
+        p=content.brief
+        div.row
+            - var item = content.items[0]
+            div.col-md-6.reasonItem
+                img(src="/assets/img/thumbnail/3home.jpg")
+                h3=item.title
+                for sentence in item.brief
+                    p=sentence
+            - var item = content.items[1]
+            div.col-md-6.reasonItem
+                img(src="/assets/img/thumbnail/multitool.jpg")
+                h3=item.title
+                for sentence in item.brief
+                    p=sentence
+    div#contactSection
+        a(href="http://chatbox-contact.webflow.io/" target="blank")
+            p 案件に関するご相談はお気軽にお問い合わせページまで
+
