@@ -1,0 +1,67 @@
+extends ../layout
+
+
+block content
+    - var member = page.metadata.member
+    div#headingSection: .container
+      h1 chatbox member
+      p chatboxで働くメンバーの紹介
+
+    div#staffSection: .container
+        //h2 Core Staff
+        //br
+        div.row.staffItem
+          div.col-md-4
+            img.face(src=member.image)
+            div.icons
+                a(href=member.facebook target="blank")
+                  i.fa.fa-facebook
+                a(href=member.twitter target="blank")
+                  i.fa.fa-twitter
+                a(href=member.coffee target="blank")
+                  i.fa.fa-coffee
+                a(href=member.mail target="blank")
+                  i.fa.fa-envelope
+          div.col-md-8
+              h3.namePlate
+                span.title=member.title
+                span.name=member.name
+              p.skill
+                for tag in member.tags
+                    span=tag
+              div.profile
+                  for line in member.profile
+                      p=line
+        div.row.historyItem
+          div.col-md-8.col-md-offset-4
+              h3 History
+              for item in member.history
+                  div.historyList
+                      span.date=item.date
+                      span=item.title
+        br
+    div#reqSection: .container
+        //h2 Core Staff
+        //br
+        h2 Join US
+        p chatboxでは一緒に働くスタッフ、フリーランスメンバーを募集しています。
+        p 学生、未経験者でも歓迎。Web制作にまつわる基礎技術から最新の技術まで、スタッフが丁寧にサポートします。
+        div.row
+            div.col-md-6
+                h3 chatbox メンバー特典
+                ul
+                    li 自社開発から始める実務経験サポート
+                    li プロ向け有償開発ツールの提供
+                    li 書籍購入補助
+                    li 就活などに便利なポートフォリオページの掲載
+            div.col-md-6
+                h3 こんな方を募集しています
+                ul
+                    li Web制作を学びたい人
+                    li 独学では学べない実務経験を積みたい
+                    li コミュニティ活動に興味がある
+        br
+    div#contactSection
+        a(href="http://chatbox-contact.webflow.io/" target="blank")
+            p メンバー参加に関するご相談はお気軽にお問い合わせページまで
+

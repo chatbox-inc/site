@@ -6197,7 +6197,21 @@ h1, h2, h3, h4, h5 {
   text-align: left; }
   #staffSection .staffItem .face {
     width: 100%;
-    border-radius: 100%; }
+    border-radius: 100%;
+    padding: 10%; }
+  #staffSection .staffItem .icons {
+    text-align: center; }
+    #staffSection .staffItem .icons i {
+      margin: 0 5px;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      font-size: 1em;
+      border-radius: 5px;
+      text-align: center;
+      background: #333;
+      color: white; }
   #staffSection .staffItem .namePlate {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -6221,6 +6235,22 @@ h1, h2, h3, h4, h5 {
       border-radius: 5px; }
   #staffSection .staffItem .profile {
     padding-left: .5em; }
+  #staffSection .historyItem .historyList {
+    padding: .5em;
+    border-bottom: 1px solid #ccc; }
+    #staffSection .historyItem .historyList .date {
+      display: inline-block;
+      padding-right: 1em;
+      color: #777; }
+
+#reqSection ul {
+  list-style: none;
+  padding-left: .5em; }
+  #reqSection ul li {
+    padding: 5px 0; }
+  #reqSection ul li::before {
+    content: '# ';
+    color: gray; }
 
 #infoSection {
   padding: 3em 0;
